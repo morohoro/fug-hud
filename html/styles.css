@@ -1,0 +1,162 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#hud-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;  
+
+    padding: 20px;
+    box-sizing: border-box;  
+
+}
+
+#player-info, #vehicle-info, #weapon-info, #money-info {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#player-info > div, #vehicle-info > div, #weapon-info > div, #money-info > div {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#health, #armor, #hunger, #thirst, #oxygen {
+    width: 100px;
+    height: 20px;
+    position: relative;
+}
+
+.bar-background {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.bar-fill {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#health .bar-fill {
+    background-color: green;
+}
+
+#armor .bar-fill {
+    background-color: blue;
+}
+
+#hunger .bar-fill {
+    background-color: yellow;
+}
+
+#thirst .bar-fill {
+    background-color: blue;
+}
+
+#oxygen .bar-fill {
+    background-color: blue;
+}
+
+#armed-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0,  
+ 0, 0.5);
+    color: red;
+}
+
+#voice-range {
+    position: relative;
+    width: 100px;
+    height: 10px;
+}
+
+.voice-range-bar {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.voice-range-fill {
+    height: 100%;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+#parachute-status {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+#money-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.money-label {
+    color: #888;
+}
+
+.money-amount {
+    font-weight: bold;
+    color: white;
+}
+
+#weapon-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#weapon-name {
+    color: white;
+    font-weight: bold;
+}
+
+#ammo-count {
+    color: white;
+}
+#minimap {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 5px;
+}

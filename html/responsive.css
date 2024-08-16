@@ -1,0 +1,56 @@
+/* styles.css */
+
+/* ... existing styles */
+
+@media only screen and (max-width: 768px) {
+  /* Medium screens (tablets) */
+  #hud-container {
+    flex-direction: row; /* Adjust for horizontal layout on tablets */
+    justify-content: space-around;
+  }
+
+  #player-info {
+    font-size: 0.8em; /* Reduce font size for better fit */
+  }
+
+  /* ... other element styles */
+}
+
+@media only screen and (max-width: 480px) {
+  /* Small screens (phones) */
+  #hud-container {
+    flex-direction: column; /* Maintain vertical layout */
+    justify-content: space-between;
+  }
+
+  #player-info {
+    font-size: 0.7em; /* Further reduce font size for phones */
+  }
+
+  /* ... other element styles */
+}
+
+#hud-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Prevent HUD from blocking interactions */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#money-info {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50%; /* Center on screen */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.5em; /* Ensure readability with larger font */
+  color: #fff; /* High contrast for visibility */
+  text-shadow: 1px 1px 2px black; /* Enhance readability */
+}

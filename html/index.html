@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fugz HUD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="hud-container">
+        <div id="player-info">
+            <div id="health"></div>
+            <div id="oxygen">
+                <div class="oxygen-bar-background"></div>
+                <div class="oxygen-bar-fill"></div>
+            </div>
+            <div id="armed-status">
+                <i class="fas fa-gun"></i>
+            </div>
+            <div id="armor"></div>
+            <div id="hunger"></div>
+            <div id="thirst"></div>
+            <div id="stress"></div>
+            <div id="voice-range">
+                <div id="minimap">
+                <div class="voice-range-bar">
+                    <div class="voice-range-fill"></div>
+                </div>
+            </div>
+            <div id="parachute-status">
+                <i class="fas fa-parachute-box"></i>
+            </div>
+            <div id="weapon-info">
+                <div id="weapon-name"></div>
+                <div id="ammo-count"></div>
+            </div>
+        </div>
+        <div id="vehicle-info">
+            <div id="speed"></div>
+            <div id="fuel-level"></div>
+            <div id="altitude"></div>
+            <div id="seatbelt"></div>
+            <div id="map-shape"></div>
+        </div>
+        <div id="money-info">
+            <div id="cash">
+                <span class="money-label">Cash:</span>
+                <span class="money-amount"></span>
+            </div>
+            <div id="bank">
+                <span class="money-label">Bank:</span>
+                <span class="money-amount"></span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
