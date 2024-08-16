@@ -1,0 +1,49 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+
+RegisterNetEvent('qb-hud:updatePlayerData')
+AddEventHandler('qb-hud:updatePlayerData', function(data)
+    -- Error handling
+    if not data then
+        print("Error: Invalid player data received")
+        return
+    end
+
+    -- Data validation (optional)
+    if not data.health or not data.money or not data.weapon then
+        print("Error: Missing essential data in player data")
+        return
+    end
+
+    -- Access config values
+    local hudPosition = Config.HUDPosition
+    local hudScale = Config.HUDScale
+
+    -- Send data to NUI with config values
+    SendNUIMessage({
+        action = "updatePlayerData",
+        data = data,
+        config = {
+            position = hudPosition,
+            scale = hudScale
+        }
+    })
+end)
+
+AddEventHandler('onResourceStart', function(resourceName)
+    if GetCurrentResourceName() ~= resourceName then return end
+
+    Wait(2000)
+
+    local hudSettingsString  
+ = GetResourceKvpString('hudSettings')
+    if hudSettingsString then
+        local hudSettings = json.decode(hudSettingsString)
+        if hudSettings then
+            loadSettings(hudSettings)
+        else
+            print('Error decoding hudSettings')
+        end
+    else
+        print('Error retrieving hudSettings')
+    end
+end)
